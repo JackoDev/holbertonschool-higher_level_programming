@@ -6,10 +6,9 @@ if number < 0:
     last = last * (-1)
 
 if last > 5:
-    text = "and is greater than 5"
+    print("Last digit of {} is {} and is greater than 5".format(number, last))
 elif last == 0:
-    text = "and is 0"
+    print("Last digit of {} is {} and is 0".format(number, last))
 elif last < 6 and last != 0:
-    text = "and is less than 6 and not 0"
-
-print("Last digit of {} is {} {:s}".format(number, last, text))
+    print("Last digit of {} is {} and is less than 6 and not 0"
+          .format(number, last))
