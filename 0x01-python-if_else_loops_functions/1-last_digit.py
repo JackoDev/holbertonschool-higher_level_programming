@@ -5,6 +5,9 @@ last = number % 10
 
 if last > 5:
     text = "and is greater than 5"
-elif last 
-    print("Last digit of {} is {}".format(number, last))
- t("and is greater than 5"))
+elif last == 0:
+    text = "and is 0"
+elif last < 6 and last != 0:
+    text = "and is less than 6 and not 0"
+
+print("Last digit of {} is {} {}".format(number, last, text))
