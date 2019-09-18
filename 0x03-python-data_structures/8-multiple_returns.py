@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
-    if sentence == "None" or sentence == "":
-        sentence[0] == "None"
     f_char = sentence[0]
+    if sentence == "None" or sentence == "":
+        f_char == "None"
     tuple_res = (len(sentence), f_char)
     return tuple_res
