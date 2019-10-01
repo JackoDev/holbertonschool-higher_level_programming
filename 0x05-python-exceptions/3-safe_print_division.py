@@ -1,5 +1,6 @@
 #!/usr/bin/python3
 
+
 def safe_print_division(a, b):
     total = 0
     try:
@@ -8,4 +9,4 @@ def safe_print_division(a, b):
         total = None
     finally:
         print("Inside result: {}".format(total))
-return total
+        return total
