@@ -5,6 +5,7 @@ a would be integer or no infinite float
 b would be integer or no infinite float
 """
 
+
 def add_integer(a, b=98):
     """
     function to add two integers
