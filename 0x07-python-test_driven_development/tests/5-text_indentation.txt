@@ -1,0 +1,13 @@
+The text_identation module
+------------------------------
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+>>> text_indentation(777)
+Traceback (most recent call last):
+TypeError: text must be a string
+>>> text_indentation("        Hi!")
+Hi!
+>>> text_indentation("My name is Juan.    Alvarez")
+My name is Juan.
+<BLANKLINE>
+Alvarez
