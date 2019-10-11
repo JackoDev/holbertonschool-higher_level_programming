@@ -20,6 +20,8 @@ The add_integer module
 98
 >>> add_integer(4, 4.333333333333333)
 8
+>>> add_integer(.2)
+98
 >>> add_integer("Holberton", 3)
 Traceback (most recent call last):
 TypeError: a must be an integer
@@ -62,4 +64,3 @@ TypeError: a must be an integer
 >>> add_integer([1,2])
 Traceback (most recent call last):
 TypeError: a must be an integer
-
