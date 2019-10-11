@@ -13,6 +13,10 @@
 -902
 >>> add_integer(.3333333, 0.2)
 0
+>>> add_integer(0.44444444444444444)
+98
+>>> add_integer(4, 4.333333333333333)
+8
 >>> add_integer("Holberton", 3)
 Traceback (most recent call last):
 TypeError: a must be an integer
