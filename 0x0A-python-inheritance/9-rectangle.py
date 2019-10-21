@@ -4,7 +4,7 @@ A rectangle class
 """
 
 
-BaseGeometry = __import__("7-base_geometry").BaseGeometry
+BaseGeometry = __import__("8-rectangle").BaseGeometry
 
 
 class Rectangle(BaseGeometry):
@@ -13,13 +13,13 @@ class Rectangle(BaseGeometry):
         """instantiation"""
         self.integer_validator("width", width)
         self.integer_validator("height", height)
-        self.__width__ = width
-        self.__height__ = height
+        self.__width = width
+        self.__height = height
 
     def area(self):
         """returns area of the rectangle instances"""
-        return self.__width__ * self.__height__
+        return self.__width * self.__height
 
     def __str__(self):
         """print rectangle representation"""
-        return "[Rectangle] {}/{}".format(self.__width__, self.__height_)
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
