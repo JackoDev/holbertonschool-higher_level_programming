@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-task 2
+task 2: class Rectangle that inherits from Base:
 """
 
 
@@ -10,6 +10,7 @@ from models.base import Base
 class Rectangle(Base):
     """New class Rectangle"""
     def __init__(self, width, height, x=0, y=0, id=None):
+        """initialization"""
         self.width = width
         self.height = height
         self.x = x
@@ -18,10 +19,12 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ Get the private attribute """
         return self.__width
 
     @width.setter
     def width(self, value):
+        """set the attribute for width"""
         if type(value) is not int:
             raise TypeError("width must be an integer")
         if value <= 0:
@@ -30,10 +33,12 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """get the private attribute"""
         return self.__height
 
     @height.setter
     def height(self, value):
+        """set the attribute for height"""
         if type(value) is not int:
             raise TypeError("height must be an integer")
         if value <= 0:
@@ -42,10 +47,12 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """get the private attribute"""
         return self.__x
 
     @x.setter
     def x(self, value):
+        """set the attribute value"""
         if type(value) is not int:
             raise TypeError("x must be an integer")
         if value < 0:
@@ -54,10 +61,12 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """get the private attribute"""
         return self.__y
 
     @y.setter
     def y(self, value):
+        """set the attribute value"""
         if type(value) is not int:
             raise TypeError("y must be an integer")
         if value < 0:
@@ -80,10 +89,12 @@ class Rectangle(Base):
             print()
 
     def __str__(self):
+        """return a string"""
         return("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
 
     def update(self, *args):
+        """for update the args given to the class"""
         if args is not None:
             for number in range(len(args)):
                 if number == 0:
