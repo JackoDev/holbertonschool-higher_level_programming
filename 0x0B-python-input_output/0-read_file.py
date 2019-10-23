@@ -5,5 +5,4 @@
 def read_file(filename=""):
     """for read and write a file"""
     with open(filename, encoding='utf-8') as a_file:
-        readed = a_file.read()
-        print(readed)
+        print(a_file.read())
