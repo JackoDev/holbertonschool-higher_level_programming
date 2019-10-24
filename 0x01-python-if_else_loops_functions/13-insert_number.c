@@ -29,7 +29,7 @@ listint_t *insert_node(listint_t **head, int number)
 			tempo->next = pointer1;
 			return (tempo);
 		}
-		if ((pointer1->n < number && pointer2->n > number) || pointer1-> == number)
+		if ((pointer1->n < number && pointer2->n > number) || pointer1->n == number)
 		{
 			pointer1->next = tempo;
 			tempo->next = pointer2;
