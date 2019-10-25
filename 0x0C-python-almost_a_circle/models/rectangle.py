@@ -90,26 +90,26 @@ class Rectangle(Base):
         return("[Rectangle] ({}) {}/{} - {}/{}".format(
             self.id, self.__x, self.__y, self.__width, self.__height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """ for update the args given to the class """
         if args:
-            for number in range(len(args)):
+            for number in range(0, len(args)):
                 if number == 0:
-                    self.id = args[0]
+                    self.id = args[number]
                 elif number == 1:
-                    self.width = args[1]
+                    self.width = args[number]
                 elif number == 2:
-                    self.height = args[2]
+                    self.height = args[number]
                 elif number == 3:
-                    self.x = args[3]
+                    self.x = args[number]
                 elif number == 4:
-                    self.y = args[4]
+                    self.y = args[number]
         else:
             for num, value in kwargs.items():
                 if num == 'width':
                     self.width = value
                 elif num == 'height':
-                    self.height =value
+                    self.height = value
                 elif num == 'x':
                     self.x = value
                 elif num == 'y':
