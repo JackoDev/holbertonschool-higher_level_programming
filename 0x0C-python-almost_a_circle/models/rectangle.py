@@ -1,14 +1,11 @@
 #!/usr/bin/python3
-"""
-task 2: class Rectangle that inherits from Base:
-"""
-
-
+""" rectangle """
 from models.base import Base
 
 
 class Rectangle(Base):
     """ New class Rectangle """
+
 
     def __init__(self, width, height, x=0, y=0, id=None):
         """ initialization """
@@ -20,7 +17,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        """ Get the private attribute """
+        """Get the private attribute """
         return self.__width
 
     @width.setter
@@ -34,7 +31,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        """ get the private attribute """
+        """Get the private attribute"""
         return self.__height
 
     @height.setter
