@@ -49,3 +49,9 @@ class Square(Rectangle):
                     self.y = value
                 elif num1 == 'id':
                     self.id = value
+
+    def to_dictionary(self):
+        """ for return attributes of the dictionary """
+        names = ["id", "size", "x", "y"]
+        sets = [self.id, self.size, self.x, self.y]
+        return dict(zip(names, sets))
