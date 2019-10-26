@@ -38,3 +38,11 @@ class Base:
                     a = a.to_dictionary()
                     list1.append(a)
                 a_file.write(cls.to_json_string(list1))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """ returns json reresentation """
+        if json_string is None or len(json_string) == 0:
+            return []
+        else:
+            return json.loads(json_string)
