@@ -116,3 +116,9 @@ class Rectangle(Base):
                     self.y = value
                 elif num == 'id':
                     self.id = value
+
+    def to_dictionary(self):
+        """ for return attributes of the dictionary """
+        names = ["id", "width", "height", "x", "y"]
+        sets = [self.id, self.width, self.height, self.x, self.y]
+        return dict(zip(names, sets))
