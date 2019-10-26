@@ -58,3 +58,17 @@ class Base:
             insta_n.update(**dictionary)
 
         return insta_n
+
+    @classmethod
+    def load_from_file(cls):
+        """ for return the class instances """
+        try:
+            with open('{}.json'.format(cls.__name__), 'r') as a_file:
+                reader = a_file.read()
+                new1 = cls.from_json_string(reader)
+                list_n = []
+                for a in new1:
+                    list_n.append(cls.create(**a))
+        except FileNotFoundError as e:
+            return []
+        return list_n
