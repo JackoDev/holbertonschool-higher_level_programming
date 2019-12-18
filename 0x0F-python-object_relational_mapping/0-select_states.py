@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """ a script that lists all states from the database hbtn_0e_0_usa """
-
 import MySQLdb
-import sys
+from sys import argv
+
 
 if __name__ == "__main__":
     if len(argv) == 4:
@@ -13,3 +13,5 @@ if __name__ == "__main__":
         cursor.execute('SELECT * FROM states ORDER BY id')
         for row in cursor.fetchall():
             print(row)
+        cursor.close()
+        new.close()
