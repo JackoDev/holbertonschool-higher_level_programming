@@ -4,16 +4,14 @@
 
 def find_peak(list_of_integers):
     """ pend doc """
-    if list_of_integers = []:
+    if list_of_integers == []:
         return None
 
     size = len(list_of_integers)
-
     if size == 1:
         return list_of_integers[0]
     if size == 2:
         return max(list_of_integers)
-
     pivote = int(size / 2)
     peak = list_of_integers[pivote]
     if peak > list_of_integers[pivote - 1] and peak > list_of_integers[pivote + 1]:
