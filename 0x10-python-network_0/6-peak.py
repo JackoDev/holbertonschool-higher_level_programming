@@ -12,11 +12,11 @@ def find_peak(list_of_integers):
         return list_of_integers[0]
     if size == 2:
         return max(list_of_integers)
-    pivote = int(size / 2)
-    peak = list_of_integers[pivote]
-    if peak > list_of_integers[pivote - 1] and peak > list_of_integers[pivote + 1]:
+    piv = int(size / 2)
+    peak = list_of_integers[piv]
+    if peak > list_of_integers[piv - 1] and peak > list_of_integers[piv + 1]:
         return peak
-    elif peak < list_of_integers[pivote - 1]:
-        return find_peak(list_of_integers[:pivote])
+    elif peak < list_of_integers[piv - 1]:
+        return find_peak(list_of_integers[:piv])
     else:
-        return find_peak(list_of_integers[pivote + 1:])
+        return find_peak(list_of_integers[piv + 1:])
