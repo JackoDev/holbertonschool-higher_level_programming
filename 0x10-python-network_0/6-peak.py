@@ -1,0 +1,23 @@
+#!/usr/bin/python3
+""" Write a function that finds a peak in a list of unsorted integers. """
+
+
+def find_peak(list_of_integers):
+    """ pend doc """
+    size = len(list_of_integers)
+
+    if size == 0:
+        return None
+    if size == 1:
+        return list_of_integers
+    if size == 2:
+        return max(list_of_integers)
+
+    pivote = int(size / 2)
+    peak = list_of_integers[pivote]
+    if peak > list_of_integers[pivote - 1] and peak > list_of_integers[pivote + 1]:
+        return peak
+    elif peak < list_of_integers[pivote - 1]:
+        return find_peak(list_of_integers[:pivote])
+    else:
+        return find_peak(list_of_integers[pivote + 1:])
