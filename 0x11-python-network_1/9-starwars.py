@@ -15,4 +15,4 @@ if __name__ == "__main__":
             for people in star_req["results"]:
                 print(people["name"])
         except:
-            print("Not a valid PARAMETER")
+            print("None")
