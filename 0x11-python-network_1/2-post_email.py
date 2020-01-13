@@ -6,7 +6,7 @@ from urllib import request, parse
 from sys import argv
 
 
-if __name__=="__main__":
+if __name__ == "__main__":
     email = parse.urlencode({"email": argv[2]}).encode()
     pre_req = request.Request(argv[1], email)
     with request.urlopen(pre_req) as req:
