@@ -3,7 +3,7 @@
 function rev (a, b) {
   return b - a;
 }
-if (process.argv.length <= 4) {
+if (process.argv.length < 4) {
   console.log(0);
 } else {
   const argArray = [];
